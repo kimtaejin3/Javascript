@@ -1,5 +1,23 @@
-h1{
-    color:pink;
+li,h1,ul{
+    margin:0;
+    padding:0;
+}
+
+li{
+    list-style: none;
+}
+
+
+body{
+    background-color: #ddd;
+}
+
+.wrapper{
+    color:white;
+    text-align: center;
+    width:270px;
+    margin:300px auto;
+    padding:20px;
 }
 
 .form,
@@ -10,4 +28,24 @@ h1{
 
 .showing{
     display:block;
+}
+
+.bgImage{
+  position: absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  z-index:-1;
+  opacity: 1;
+}
+
+.js-toDoList{
+    margin-top: 10px;
+}
+
+li{
+    margin-top:10px;
+    font-weight: bold;
+    line-height: 1.6;
 }
