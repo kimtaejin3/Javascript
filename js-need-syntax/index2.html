@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js2</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+    <script>
+        function Person(first, last, age, eye){
+            this.firstName=first;
+            this.lastName=last;
+            this.age=age;
+            this.eyeColor=eye;
+        }
+
+        Person.prototype.name=function(){
+            return this.firstName+" "+this.lastName;
+        };
+
+        var myFather = new Person("taejin","kim",21,"brown");
+        document.getElementById("demo").innerHTML="My father is "+myFather.name();
+    </script>
+</body>
+</html>

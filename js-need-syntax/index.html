@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<body>
+    
+    <h1>Prototype- thanks egoing</h1>
+    <p id="pro"></p>
+    new: 자식에게 일어나는 일이 부모에게 일어나는 것을 방지하기 위해 상속받고자 할 때는 복제본을 객체로 사용해야 함.
+    <script>
+        function Ultra(){}
+        Ultra.prototype.ultraProp=true;
+
+        function Super(){}
+        Super.prototype=new Ultra();
+
+        function Sub(){}
+        Sub.prototype=new Super();
+
+
+        var o =new Sub();
+        
+        document.querySelector("#pro").innerHTML=o.ultraProp;
+    </script>
+</body>
+</html>
