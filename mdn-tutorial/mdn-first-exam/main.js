@@ -19,21 +19,27 @@ randomize.addEventListener('click',result);
 
 function result(){
     
-    var newStory=storyText;
-    var xItem=randomValueFromArray(insertX);
-    var yItem=randomValueFromArray(insertY);
-    var zItem=randomValueFromArray(insertZ);
+    let newStory=storyText;
+    let xItem=randomValueFromArray(insertX);
+    let yItem=randomValueFromArray(insertY);
+    let zItem=randomValueFromArray(insertZ);
 
+    newStory=newStory.replace(':insertx:',xItem);
+    newStory=newStory.replace(':insertx:',xItem);
+    newStory=newStory.replace(':inserty:',yItem);
+    newStory=newStory.replace(":insertz:",zItem);
 
 
     if(customName.value!=' '){
-         let name=customName.value;
-        
+        let name=customName.value;
+        newStory=newStory.replace('Bob',name);
      }
 
      if(document.getElementById("uk").checked){
-         let Weight=Math.random(300);
+         let weight=Math.random(300);
          let temperature=Math.round(94);
+         newStory = newStory.replace('94 fahrenheit',temperature);
+         newStory = newStory.replace('300 pounds',weight);
      }
     
    
